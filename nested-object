@@ -1,0 +1,19 @@
+
+// Example nested object
+const obj = {"a":"b":"c":"d"};
+var key;
+  // Accessing nested properties with dot notation
+  const value1 = obj.a;
+  const value2 = obj.a.b:
+  const value3 = obj.a.b.c:
+  
+function valueBykey(key){
+
+  if (key=a) {
+    console.log("key value :" + value1 +)
+ } else if (key=a/b) {
+    console.log("key value :" + value2 +)
+ } else (key=a/b/c )  {
+    console.log("key value :" + value3 +)
+ } 
+}

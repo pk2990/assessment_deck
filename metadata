@@ -1,0 +1,18 @@
+# code for retriving metadata of the instance from outside the vm in GCP.
+
+# Using service account.
+# permision required.
+# Coumpute instance admin (v1) (role/compute.instanceAdmin.v1)
+# Service Account user (role/iam.serviceAccountUser)
+
+from local 
+
+gcloud auth login
+
+##### impersonate service account which above mentioned permission
+
+gcloud config set auth/impersonate_service_account SERVICE_ACCT_EMAIL
+
+curl "http://metadata.google.internal/computeMetadata/v1/instance/METADATA_KEY?alt=JSON" -H "Metadata-Flavor: Google"
+
+##### set alt=JSON for receiving the output on JSON format.
